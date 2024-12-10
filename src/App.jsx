@@ -5,12 +5,13 @@ import Dashboard from './components/dashboard/Dashboard';
 import FacebookAdGenerator from './components/marketing/FacebookAd';
 import Templates from './components/templates/Templates';
 
-const AppContent = () => {
+const MainApp = () => {
   const { currentView } = useAuth();
 
   const renderContent = () => {
     switch (currentView) {
       case 'app':
+      case 'dashboard':
         return <Dashboard />;
       case 'facebook':
         return <FacebookAdGenerator />;
@@ -32,7 +33,7 @@ const App = () => {
   return (
     <AuthProvider>
       <AuthContainer>
-        <AppContent />
+        <MainApp />
       </AuthContainer>
     </AuthProvider>
   );
