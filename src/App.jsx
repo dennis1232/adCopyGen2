@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AppLayout from './components/layout/AppLayout';
-import Dashboard from './components/dashboard/Dashboard';
-import FacebookAdGenerator from './components/marketing/FacebookAd';
-import Templates from './components/templates/Templates';
+import AppLayout from '@/components/layout/AppLayout';
+import Dashboard from '@/components/dashboard/Dashboard';
+import FacebookAdGenerator from '@/components/marketing/FacebookAd';
+import Templates from '@/components/templates/Templates';
 
 const App = () => {
   return (
