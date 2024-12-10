@@ -1,5 +1,5 @@
 import React from 'react';
-import { AuthProvider, AuthContainer } from './components/auth/AuthComponents';
+import { AuthProvider, AuthContainer, useAuth } from './components/auth/AuthComponents';
 import Layout from './components/layout/Layout';
 import Dashboard from './components/dashboard/Dashboard';
 import FacebookAdGenerator from './components/marketing/FacebookAd';
