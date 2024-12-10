@@ -1,24 +1,20 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Home from './pages/Home'
-import Generator from './pages/Generator'
-import AdCopies from './pages/AdCopies'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AppLayout from './components/layout/AppLayout';
+import Dashboard from './components/dashboard/Dashboard';
+import FacebookAdGenerator from './components/marketing/FacebookAd';
 
-function App() {
+const App = () => {
   return (
-    <Router basename="/">
-      <div className="min-h-screen bg-gray-50">
-        <Navbar />
-        <main className="container mx-auto px-4 py-8">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/generator" element={<Generator />} />
-            <Route path="/copies" element={<AdCopies />} />
-          </Routes>
-        </main>
-      </div>
+    <Router basename="/adCopyGen2">
+      <AppLayout>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/facebook" element={<FacebookAdGenerator />} />
+        </Routes>
+      </AppLayout>
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;
