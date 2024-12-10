@@ -26,7 +26,6 @@ const FacebookAdGenerator = () => {
       ...prev,
       [name]: value
     }));
-    // Clear error when user types
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -70,7 +69,6 @@ const FacebookAdGenerator = () => {
         <h2 className="text-2xl font-bold mb-6 text-gray-800">Facebook Ad Generator</h2>
         
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Template Selection */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Select Template
@@ -89,7 +87,6 @@ const FacebookAdGenerator = () => {
             </select>
           </div>
 
-          {/* Product Information */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Product Name
@@ -99,9 +96,7 @@ const FacebookAdGenerator = () => {
               name="productName"
               value={formData.productName}
               onChange={handleInputChange}
-              className={`w-full rounded-lg border p-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 ${
-                errors.productName ? 'border-red-500' : 'border-gray-300'
-              }`}
+              className={`w-full rounded-lg border p-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 ${errors.productName ? 'border-red-500' : 'border-gray-300'}`}
               placeholder="Enter your product name"
             />
             {errors.productName && (
@@ -109,7 +104,6 @@ const FacebookAdGenerator = () => {
             )}
           </div>
 
-          {/* Key Benefits */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Key Benefits
@@ -118,9 +112,7 @@ const FacebookAdGenerator = () => {
               name="benefits"
               value={formData.benefits}
               onChange={handleInputChange}
-              className={`w-full rounded-lg border p-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 ${
-                errors.benefits ? 'border-red-500' : 'border-gray-300'
-              }`}
+              className={`w-full rounded-lg border p-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 ${errors.benefits ? 'border-red-500' : 'border-gray-300'}`}
               rows={3}
               placeholder="Enter key benefits (one per line)"
             />
@@ -129,7 +121,6 @@ const FacebookAdGenerator = () => {
             )}
           </div>
 
-          {/* Call to Action */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Call to Action
@@ -139,9 +130,7 @@ const FacebookAdGenerator = () => {
               name="cta"
               value={formData.cta}
               onChange={handleInputChange}
-              className={`w-full rounded-lg border p-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 ${
-                errors.cta ? 'border-red-500' : 'border-gray-300'
-              }`}
+              className={`w-full rounded-lg border p-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 ${errors.cta ? 'border-red-500' : 'border-gray-300'}`}
               placeholder="Enter your call to action"
             />
             {errors.cta && (
@@ -149,7 +138,6 @@ const FacebookAdGenerator = () => {
             )}
           </div>
 
-          {/* Target Audience */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Target Audience
@@ -172,7 +160,6 @@ const FacebookAdGenerator = () => {
           </button>
         </form>
 
-        {/* Generated Ad Preview */}
         {generatedAd && (
           <div className="mt-8">
             <div className="flex justify-between items-center mb-4">
@@ -206,7 +193,6 @@ const FacebookAdGenerator = () => {
 };
 
 const generateAdCopy = (data) => {
-  // Placeholder for AI generation logic
   return `🔥 Attention ${data.audience || 'everyone'}! 
 
 ✨ Introducing ${data.productName}
