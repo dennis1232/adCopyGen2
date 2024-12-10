@@ -1,7 +1,6 @@
 import { useState } from 'react'
 
 function AdCopies() {
-  // Mock data for demonstration
   const initialCopies = [
     {
       id: 1,
