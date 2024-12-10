@@ -19,8 +19,6 @@ const Templates = () => {
     }
   ]);
 
-  const [selectedTemplate, setSelectedTemplate] = useState(null);
-  
   const handleCopy = (template) => {
     navigator.clipboard.writeText(template.structure);
   };
@@ -69,19 +67,6 @@ const Templates = () => {
           </div>
         ))}
       </div>
-
-      {templates.length === 0 && (
-        <div className="text-center py-12">
-          <h3 className="mt-2 text-sm font-medium text-gray-900">No templates</h3>
-          <p className="mt-1 text-sm text-gray-500">Get started by creating a new template.</p>
-          <div className="mt-6">
-            <button className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
-              <Plus className="h-5 w-5 mr-2" />
-              New Template
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
